@@ -12,7 +12,7 @@
             <div class="btn-grid">
                 <div class="button-container">
                     <button class="btn w-100 btn"  (click)="toogleLight(roomName)">
-                        <i class="bi bi-lightbulb indicator" [ngClass]="{'active': Light, ' ': !Light}" style="font-size:30px;"></i>   <p class="btn-label w-100">light | Off</p>
+                        <i class="bi bi-lightbulb indicator" [ngClass]="{'active': Light, ' ': !Light}" style="font-size:30px;"></i>   <p class="btn-label w-100">light</p>
                     </button>
                   
                     <div class="indicator" [ngClass]="{'active': Light, ' ': !Light}"></div>
@@ -20,7 +20,7 @@
                 <div class="button-container">
                     <button class="btn w-100 btn" (click)="tooglePlug(roomName)">
                         <i class="bi bi-plug-fill indicator" [ngClass]="{'active': Plug, ' ': !Plug}" style="font-size:30px;"></i>
-                          <p class="btn-label w-100">plug | Off</p>
+                          <p class="btn-label w-100">plug</p>
                     </button>
                   
                     <div class="indicator" [ngClass]="{'active': Plug, ' ': !Plug}"></div>
