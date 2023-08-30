@@ -1,28 +1,51 @@
 
     <div class="card">
-        <div class="card-header">
-            <h5 class="card-title">{{roomName}}</h5>
+     
+
+     <div class="task">
+        <div class="tags">
+          <span class="tag"><span>{{roomName}}</span></span>
+        
         </div>
+    </div>
         <div class="card-body">
             <div class="btn-grid">
                 <div class="button-container">
-                    <button class="btn w-100 btn-info" (click)="toogleLight(roomName)">
-                        <svg width="18" height="18" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M21 2L20 3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/> <path d="M3 2L4 3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/> <path d="M21 16L20 15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/> <path d="M3 16L4 15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/> <path d="M9 18H15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/> <path d="M10 21H14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/> <path d="M11.9998 3C7.9997 3 5.95186 4.95029 5.99985 8C6.02324 9.48689 6.4997 10.5 7.49985 11.5C8.5 12.5 9 13 8.99985 15H14.9998C15 13.0001 15.5 12.5 16.4997 11.5001L16.4998 11.5C17.4997 10.5 17.9765 9.48689 17.9998 8C18.0478 4.95029 16 3 11.9998 3Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/> </svg>
+                    <button class="btn w-100 btn"  (click)="toogleLight(roomName)">
+                        <i class="bi bi-lightbulb indicator" [ngClass]="{'active': Light, ' ': !Light}" style="font-size:30px;"></i>   <p class="btn-label w-100">light | Off</p>
                     </button>
-                    <p class="btn-label w-100">light</p>
+                  
                     <div class="indicator" [ngClass]="{'active': Light, ' ': !Light}"></div>
                 </div>
                 <div class="button-container">
-                    <button class="btn w-100 btn-info" (click)="tooglePlug(roomName)">
-                        <svg style="color: white" xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor" class="bi bi-activity" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M6 2a.5.5 0 0 1 .47.33L10 12.036l1.53-4.208A.5.5 0 0 1 12 7.5h3.5a.5.5 0 0 1 0 1h-3.15l-1.88 5.17a.5.5 0 0 1-.94 0L6 3.964 4.47 8.171A.5.5 0 0 1 4 8.5H.5a.5.5 0 0 1 0-1h3.15l1.88-5.17A.5.5 0 0 1 6 2Z" fill="white"></path> </svg>
+                    <button class="btn w-100 btn" (click)="tooglePlug(roomName)">
+                        <i class="bi bi-plug-fill indicator" [ngClass]="{'active': Plug, ' ': !Plug}" style="font-size:30px;"></i>
+                          <p class="btn-label w-100">plug | Off</p>
                     </button>
-                    <p class="btn-label w-100">plug</p>
+                  
                     <div class="indicator" [ngClass]="{'active': Plug, ' ': !Plug}"></div>
                 </div>
-                <div class="values">
-                    <p>Temperature: {{temp}}°C</p>
-                    <p>Humidity: {{Humidity}}%</p>
+                
+
+
+                <div class="task">
+                    <div class="tags">
+                      <span class="tag"><span> <i class="bi bi-thermometer-half"></i>Temp | {{temp}}°C</span></span>
+                    
+                    </div>
                 </div>
+
+                <div class="task">
+                    <div class="tags">
+                      <span class="tag"><span><i class="bi bi-moisture"></i> Hum | {{Humidity}}%</span></span>
+                    
+                    </div>
+                </div>
+               
+                
             </div>
         </div>
     </div>
+    
+
+    

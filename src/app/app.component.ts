@@ -22,6 +22,8 @@ export class AppComponent {
       this.list=val;
       //console.log(val);
       this.rooms=this.list;
+
+      console.log(this.rooms);
     });
   }
 }
