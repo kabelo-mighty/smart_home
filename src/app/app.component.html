@@ -1,11 +1,16 @@
+<nav class="navbar navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <span class="heading"><i class="bi bi-houses-fill"></i> Smart <span class="name-two">Home</span><i class="bi bi-dot"></i></span>
+    </a>
+  </div>
+
+  
+</nav>
 <div class="app container">
   <section class="sh_header_bar">
     <span>{{date | date}}</span>
-    <div class="row">
-      <div class="col-9">
-        <span class="heading">Smart Home</span>
-      </div>
-    </div>
+
   </section>
   <div class='row'>
     <div class='col-md-6 col-lg-3 mb-4' *ngFor="let room of rooms">
